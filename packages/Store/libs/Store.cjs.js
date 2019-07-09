@@ -21,17 +21,17 @@ var __assign = function() {
       (this.quotaStrategy = {
         CLEAR_ALL: 'CLEAR_ALL',
         CLEAR_ONLY_TAG: 'CLEAR_ONLY_TAG',
-        NONE: 'NONE'
+        NONE: 'NONE',
       }),
         (this.store = window.localStorage),
         (this.defaultSetOptions = {
           maxAge: 0,
-          quotaStrategy: this.quotaStrategy.CLEAR_ALL
+          quotaStrategy: this.quotaStrategy.CLEAR_ALL,
         }),
         (this.defaultOptions = {
           tag: 'mgstore',
           maxAge: 0,
-          quotaStrategy: this.quotaStrategy.CLEAR_ALL
+          quotaStrategy: this.quotaStrategy.CLEAR_ALL,
         });
       var e = __assign({}, this.defaultOptions, t);
       (this.isSupport = this.checkSupport()),
@@ -74,7 +74,7 @@ var __assign = function() {
             {},
             this.defaultSetOptions,
             { maxAge: this.maxAge, quotaStrategy: this.curQuotaStrategy },
-            r
+            r,
           ),
           a = this.maxAgeTime;
         a = o.maxAge ? this.getNowTimeStamp() + o.maxAge : 0;
@@ -97,7 +97,7 @@ var __assign = function() {
         return !a.time || a.time > i ? a.value : (this.remove(t), null);
       }),
       (t.prototype.remove = function(t, e) {
-        var r = this.getKey(t);
+        var r = this.getKey(t, e);
         this.removeByFullName(r);
       }),
       (t.prototype.removeByFullName = function(t) {

@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  'extends': 'stylelint-config-primer',
+  extends: 'stylelint-config-primer',
   rules: {
     'selector-max-id': 1,
     'selector-max-specificity': '1,4,0',
@@ -8,5 +8,6 @@ module.exports = {
       'ignore': ['attribute', 'class', 'id']
     }],
     'selector-max-type': 2,
+    'primer/selector-no-utility': false
   }
 }

@@ -12,7 +12,7 @@ interface SetOptions {
 
 const defaultOptions: MgStoreOptions = {
   tag: 'mgstore',
-  maxAge: 0
+  maxAge: 0,
 };
 
 class MgStore {
@@ -20,7 +20,7 @@ class MgStore {
   protected quotaStrategy: { [key: string]: quotaStrategy } = {
     CLEAR_ALL: 'CLEAR_ALL',
     CLEAR_ONLY_TAG: 'CLEAR_ONLY_TAG',
-    NONE: 'NONE'
+    NONE: 'NONE',
   };
   private store: Storage = window.localStorage;
   private tag: string;
@@ -29,12 +29,12 @@ class MgStore {
   private curQuotaStrategy: quotaStrategy;
   private defaultSetOptions: SetOptions = {
     maxAge: 0,
-    quotaStrategy: this.quotaStrategy.CLEAR_ALL
+    quotaStrategy: this.quotaStrategy.CLEAR_ALL,
   };
   private defaultOptions: MgStoreOptions = {
     tag: 'mgstore',
     maxAge: 0,
-    quotaStrategy: this.quotaStrategy.CLEAR_ALL
+    quotaStrategy: this.quotaStrategy.CLEAR_ALL,
   };
 
   public isSupport: boolean;
@@ -49,7 +49,7 @@ class MgStore {
     // const curOptions = Object.assign(this.defaultOptions, options);
     const curOptions = {
       ...this.defaultOptions,
-      ...options
+      ...options,
     };
     this.isSupport = this.checkSupport();
     this.tag = curOptions.tag as string;
@@ -100,7 +100,7 @@ class MgStore {
       ...this.defaultSetOptions,
       maxAge: this.maxAge,
       quotaStrategy: this.curQuotaStrategy,
-      ...options
+      ...options,
     };
     let time = this.maxAgeTime;
     if (!customOptions.maxAge) {
@@ -112,7 +112,7 @@ class MgStore {
     const valueStr = this.stringify({
       time,
       tag: this.tag,
-      value: value
+      value: value,
     });
     try {
       this.store.setItem(keyName, valueStr);
@@ -143,7 +143,7 @@ class MgStore {
     return null;
   }
   remove(key: string, tagName?: string) {
-    const keyName = this.getKey(key);
+    const keyName = this.getKey(key, tagName);
     this.removeByFullName(keyName);
   }
   removeByFullName(key: string) {
@@ -180,7 +180,7 @@ class MgStore {
       [this.quotaStrategy.CLEAR_ONLY_TAG]: () => {
         this.clearAllByTag();
       },
-      [this.quotaStrategy.NONE]: () => {}
+      [this.quotaStrategy.NONE]: () => {},
     };
     strategyMap[curStrategy]();
   }

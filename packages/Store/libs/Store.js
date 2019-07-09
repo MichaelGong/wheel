@@ -22,17 +22,17 @@ var mgStore = (function() {
       (this.quotaStrategy = {
         CLEAR_ALL: 'CLEAR_ALL',
         CLEAR_ONLY_TAG: 'CLEAR_ONLY_TAG',
-        NONE: 'NONE'
+        NONE: 'NONE',
       }),
         (this.store = window.localStorage),
         (this.defaultSetOptions = {
           maxAge: 0,
-          quotaStrategy: this.quotaStrategy.CLEAR_ALL
+          quotaStrategy: this.quotaStrategy.CLEAR_ALL,
         }),
         (this.defaultOptions = {
           tag: 'mgstore',
           maxAge: 0,
-          quotaStrategy: this.quotaStrategy.CLEAR_ALL
+          quotaStrategy: this.quotaStrategy.CLEAR_ALL,
         });
       var r = t({}, this.defaultOptions, e);
       (this.isSupport = this.checkSupport()),
@@ -75,7 +75,7 @@ var mgStore = (function() {
             {},
             this.defaultSetOptions,
             { maxAge: this.maxAge, quotaStrategy: this.curQuotaStrategy },
-            o
+            o,
           ),
           i = this.maxAgeTime;
         i = a.maxAge ? this.getNowTimeStamp() + a.maxAge : 0;
@@ -98,7 +98,7 @@ var mgStore = (function() {
         return !a.time || a.time > i ? a.value : (this.remove(t), null);
       }),
       (e.prototype.remove = function(t, e) {
-        var r = this.getKey(t);
+        var r = this.getKey(t, e);
         this.removeByFullName(r);
       }),
       (e.prototype.removeByFullName = function(t) {

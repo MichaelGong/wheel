@@ -20,17 +20,17 @@ var t = function() {
       (this.quotaStrategy = {
         CLEAR_ALL: 'CLEAR_ALL',
         CLEAR_ONLY_TAG: 'CLEAR_ONLY_TAG',
-        NONE: 'NONE'
+        NONE: 'NONE',
       }),
         (this.store = window.localStorage),
         (this.defaultSetOptions = {
           maxAge: 0,
-          quotaStrategy: this.quotaStrategy.CLEAR_ALL
+          quotaStrategy: this.quotaStrategy.CLEAR_ALL,
         }),
         (this.defaultOptions = {
           tag: 'mgstore',
           maxAge: 0,
-          quotaStrategy: this.quotaStrategy.CLEAR_ALL
+          quotaStrategy: this.quotaStrategy.CLEAR_ALL,
         });
       var r = t({}, this.defaultOptions, e);
       (this.isSupport = this.checkSupport()),
@@ -73,7 +73,7 @@ var t = function() {
             {},
             this.defaultSetOptions,
             { maxAge: this.maxAge, quotaStrategy: this.curQuotaStrategy },
-            a
+            a,
           ),
           i = this.maxAgeTime;
         i = o.maxAge ? this.getNowTimeStamp() + o.maxAge : 0;
@@ -96,7 +96,7 @@ var t = function() {
         return !o.time || o.time > i ? o.value : (this.remove(t), null);
       }),
       (e.prototype.remove = function(t, e) {
-        var r = this.getKey(t);
+        var r = this.getKey(t, e);
         this.removeByFullName(r);
       }),
       (e.prototype.removeByFullName = function(t) {
