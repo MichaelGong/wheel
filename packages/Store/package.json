@@ -1,5 +1,5 @@
 {
-  "name": "@mg/store",
+  "name": "@mgong/store",
   "version": "0.1.0-alpha.3",
   "description": "localstorage封装",
   "keywords": [
