@@ -5,6 +5,9 @@
   "keywords": [
     "localstorage"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "gonghao <1506301420@qq.com>",
   "homepage": "https://github.com/MichaelGong/wheel",
   "license": "ISC",
@@ -51,5 +54,6 @@
   },
   "dependencies": {
     "typescript": "^3.5.2"
-  }
+  },
+  "gitHead": "0437726557be886b573838fdfc12844400b927f8"
 }
