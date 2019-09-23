@@ -149,6 +149,7 @@ class MgStore {
   removeByFullName(key: string) {
     this.store.removeItem(key);
   }
+
   clear() {
     this.store.clear();
   }
