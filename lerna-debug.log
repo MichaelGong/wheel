@@ -1,4 +1,4 @@
-39 error Error: Command failed: git commit -F /private/var/folders/w1/qw7gzxdn3nj84kmj02kchd_r0000gn/T/0981bf05-5e6c-4f33-b9ae-f5f346eeff45/lerna-commit.txt
+39 error Error: Command failed: git commit -F /private/var/folders/w1/qw7gzxdn3nj84kmj02kchd_r0000gn/T/826f5c11-91f3-4e8c-9ff5-aeedb322e6ff/lerna-commit.txt
 39 error  > running pre-commit hook: lint-staged
 39 error No staged files match any of provided globs.
 39 error  > running prepare-commit-msg hook: exec < /dev/tty && git cz --hook
