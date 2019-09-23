@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0-alpha.3](https://github.com/MichaelGong/wheel/compare/@mgong/store@0.2.0-alpha.1...@mgong/store@0.2.0-alpha.3) (2019-09-23)
+
+
+### Bug Fixes
+
+* **fix:** fix ([8a31e82](https://github.com/MichaelGong/wheel/commit/8a31e82))
+* **fix:** fix ([f7e676e](https://github.com/MichaelGong/wheel/commit/f7e676e))
+
+
+
+
+
 # [0.2.0-alpha.2](https://github.com/MichaelGong/wheel/compare/@mgong/store@0.2.0-alpha.1...@mgong/store@0.2.0-alpha.2) (2019-09-23)
 
 
