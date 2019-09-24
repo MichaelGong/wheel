@@ -146,7 +146,6 @@ class MgStore {
     const keyName = this.getKey(key, tagName);
     this.removeByFullName(keyName);
   }
-
   removeByFullName(key: string) {
     this.store.removeItem(key);
   }
