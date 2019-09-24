@@ -7,10 +7,5 @@
   "version": "independent",
   "publishConfig": {
     "access": "public"
-  },
-  "command": {
-    "publish": {
-      "conventionalCommits": true
-    }
   }
 }
