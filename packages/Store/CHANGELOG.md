@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0-alpha.7](https://github.com/MichaelGong/wheel/compare/@mgong/store@0.2.0-alpha.6...@mgong/store@0.2.0-alpha.7) (2019-09-24)
+
+
+### Features
+
+* **fix:** fix ([fe2b10f](https://github.com/MichaelGong/wheel/commit/fe2b10f))
+
+
+
+
+
 # [0.2.0-alpha.6](https://github.com/MichaelGong/wheel/compare/@mgong/store@0.2.0-alpha.5...@mgong/store@0.2.0-alpha.6) (2019-09-23)
 
 
