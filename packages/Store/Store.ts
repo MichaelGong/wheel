@@ -152,7 +152,6 @@ class MgStore {
   clear() {
     this.store.clear();
   }
-
   clearAllByTag(tagName?: string) {
     const tag = tagName || this.tag;
     const length = this.store.length;
